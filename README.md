@@ -241,17 +241,25 @@ The application implements a caching layer to improve performance:
 
 ## Testing
 
-The project includes test infrastructure using Jest and React Testing Library:
-
-```bash
-# Run tests (note: test script needs to be added to package.json)
-npm test
-```
+The project includes test infrastructure using Jest and React Testing Library. Test configuration is set up in `jest.config.js` with support for:
+- Component testing with React Testing Library
+- API route testing
+- TypeScript support
+- Code coverage collection
 
 Test files are located in the `__tests__/` directory:
-- API route tests
-- Component tests
-- Utility function tests
+- `__tests__/api/` - API route tests
+- `__tests__/components/` - Component tests
+- `__tests__/lib/` - Utility function tests
+
+To run tests, add a test script to `package.json`:
+```json
+"scripts": {
+  "test": "jest",
+  "test:watch": "jest --watch",
+  "test:coverage": "jest --coverage"
+}
+```
 
 ## Deployment
 
